@@ -1,0 +1,5 @@
+<h3>Details for your chosen task</h3>
+<h4><%= @task.title %></h4>
+<p><%= @task.details %></p>
+<p><strong><%= "Completed!" if @task.completed == true %></strong></p>
+<%= link_to "Back to all tasks", tasks_path %>
