@@ -2,6 +2,11 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
+      <% if task.completed == true %>
+        <input type="checkbox" name="complete" checked>
+      <% else %>
+        <input type="checkbox" name="complete">
+      <% end %>
       <%= link_to task.title, task_path(task) %>
       <%= link_to "edit", task_edit_path(task) %>
       blubb
